@@ -1,6 +1,8 @@
 /** @format */
+import { FiLinkedin, FiInstagram, FiTwitter, FiMail } from "react-icons/fi";
 import styles from "../Banner/styles.module.scss";
 import { Avatar } from "../Avatar";
+import Link from "next/link";
 
 export function Banner() {
   return (
@@ -21,6 +23,20 @@ export function Banner() {
           entre consultoria, construção de negócios, programação e um café bem
           forte.
         </p>
+        <div className={styles.social}>
+          <Link href="https://www.linkedin.com/in/hugollm/" target="_blank">
+            <FiLinkedin size={20} color="#ffffff91" />
+          </Link>
+          <Link href="https://twitter.com/HugoMesquitaWeb" target="_blank">
+            <FiTwitter size={20} color="#ffffff91" />
+          </Link>
+          <Link href="https://instagram.com/hugomesquita.dev">
+            <FiInstagram size={20} color="#ffffff91" />
+          </Link>
+          <Link href="mailto:hugomesquitaweb@gmail.com">
+            <FiMail size={20} color="#ffffff91" />
+          </Link>
+        </div>
       </div>
       <Avatar />
     </section>
